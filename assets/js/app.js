@@ -96,9 +96,9 @@ const Mazuwo = (() => {
         <div>
           <h4>Contact</h4>
           <p class="small">WhatsApp: +27 (66) 066-8508<br>Call: 087 897 3731<br>Email: info@mazuwo.co.za<br>24 Mvudi Park, Thohoyandou, 0950</p>
-          <div class="actions" style="margin-top:.8rem">
-            <a class="btn small secondary" href="https://wa.me/27660668508" target="_blank" rel="noreferrer">WhatsApp</a>
-            <a class="btn small secondary" href="tel:0878973731">Call</a>
+          <div class="actions footer-contact-actions" style="margin-top:.8rem">
+            <a class="btn small secondary footer-contact-btn" href="https://wa.me/27660668508" target="_blank" rel="noreferrer" aria-label="WhatsApp Mazuwo">WhatsApp</a>
+            <a class="btn small secondary footer-contact-btn" href="tel:0878973731" aria-label="Call Mazuwo">Call</a>
           </div>
         </div>
         <div>
@@ -120,7 +120,6 @@ const Mazuwo = (() => {
       </div>
       <div class="container copy">
         <span>(c) 2026 MAZUWO. All rights reserved.</span>
-        <span>Built for Cloudflare Pages. No API key required for the AI helper.</span>
       </div>
     `;
   }

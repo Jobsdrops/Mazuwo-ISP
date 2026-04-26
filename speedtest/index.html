@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mazuwo Wireless - Speed Test</title>
-  <meta name="description" content="Test your Mazuwo internet download speed, upload speed and ping from inside the Mazuwo Wireless website.">
+  <meta name="description" content="Run a quick Mazuwo browser-based test for download, upload and ping.">
   <link rel="icon" href="/assets/images/LOGO-.png">
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/styles.css?v=finalaccuracy">
 </head>
 <body>
 <header></header>
@@ -15,28 +15,32 @@
   <section class="speed-hero">
     <div class="container speed-hero-grid">
       <div class="speed-copy">
-        <span class="badge">Mazuwo Speed Check</span>
+        <span class="badge">Mazuwo Live Speed Check</span>
         <h1 class="hero-title">Test your connection in a few seconds.</h1>
         <p class="hero-copy">Run a quick browser-based test for download, upload and ping. For the fairest result, pause streaming, stay close to your router and test one device at a time.</p>
         <div class="actions">
-          <button class="btn" id="speedStartTop" type="button">Start Speed Test</button>
-          <button class="btn secondary" id="speedGuideBtn" type="button">How to test properly</button>
+          <button class="btn" id="speedStartTop" type="button">Start 30-second test</button>
+          <button class="btn secondary" id="speedGuideBtn" type="button">How this test works</button>
         </div>
       </div>
 
-      <div class="speed-card" aria-live="polite">
+      <div class="speed-card speed-live-card" aria-live="polite">
         <div class="speed-card-top">
           <div>
-            <p class="section-kicker">Live result</p>
+            <p class="section-kicker">Live test</p>
             <h2 id="speedPhase">Ready</h2>
           </div>
-          <span class="speed-pill" id="speedStatus">Idle</span>
+          <div class="speed-status-stack">
+            <span class="speed-pill" id="speedStatus">Idle</span>
+            <span class="speed-clock" id="speedClock" aria-label="Countdown timer" hidden><span class="speed-clock-dot"></span><strong id="timeLeft">30s left</strong></span>
+          </div>
         </div>
 
-        <div class="speedometer" aria-label="Current speed gauge">
+
+        <div class="speedometer" aria-label="Current live throughput gauge">
           <svg viewBox="0 0 260 160" role="img" aria-labelledby="gaugeTitle gaugeDesc">
-            <title id="gaugeTitle">Speedometer gauge</title>
-            <desc id="gaugeDesc">The needle moves as the measured speed changes.</desc>
+            <title id="gaugeTitle">Live speedometer gauge</title>
+            <desc id="gaugeDesc">The needle moves while the download and upload speed change.</desc>
             <path class="gauge-track" d="M35 130 A95 95 0 0 1 225 130" pathLength="100"></path>
             <path class="gauge-fill" id="gaugeFill" d="M35 130 A95 95 0 0 1 225 130" pathLength="100"></path>
             <line class="gauge-needle" id="gaugeNeedle" x1="130" y1="130" x2="130" y2="53"></line>
@@ -44,14 +48,26 @@
           </svg>
           <div class="speed-readout">
             <strong id="liveSpeed">0.0</strong>
-            <span>Mbps</span>
+            <span id="liveGaugeLabel">Live Mbps</span>
           </div>
         </div>
 
-        <div class="speed-results">
-          <div class="speed-result"><span>Ping</span><strong id="pingResult">-- ms</strong></div>
-          <div class="speed-result"><span>Download</span><strong id="downloadResult">-- Mbps</strong></div>
-          <div class="speed-result"><span>Upload</span><strong id="uploadResult">-- Mbps</strong></div>
+        <div class="speed-results speed-results-live">
+          <div class="speed-result">
+            <span>Download</span>
+            <strong id="downloadResult">0.0 Mbps</strong>
+            <small id="downloadBytes">Current rate: 0 KB/s</small>
+          </div>
+          <div class="speed-result">
+            <span>Upload</span>
+            <strong id="uploadResult">0.0 Mbps</strong>
+            <small id="uploadBytes">Current rate: 0 KB/s</small>
+          </div>
+          <div class="speed-result">
+            <span>Loaded ping</span>
+            <strong id="pingResult">-- ms</strong>
+            <small id="pingDetail">Measured during load</small>
+          </div>
         </div>
 
         <div class="speed-controls">
@@ -59,7 +75,7 @@
           <button class="btn secondary full" id="speedStop" type="button" disabled>Stop</button>
         </div>
 
-        <p class="small speed-note" id="speedNote">This test uses Cloudflare Pages Functions on this website. Results are useful for quick checks, but Wi-Fi distance, device age and background apps can affect accuracy.</p>
+        <p class="small speed-note" id="speedNote">This test intentionally measures ping while upload and download are running, which is useful for gaming, video calls and normal real-world usage.</p>
       </div>
     </div>
   </section>
@@ -67,12 +83,12 @@
   <section class="section band">
     <div class="container grid-3">
       <article class="info-panel speed-tip-card">
-        <h3>For best accuracy</h3>
-        <p class="small">Stand near the router, close downloads, pause streaming and test again if the first result looks unusual.</p>
+        <h3>What you will see live</h3>
+        <p class="small">Download, upload, loaded ping, live rate and the countdown all update on the same screen while the test is running.</p>
       </article>
       <article class="info-panel speed-tip-card">
-        <h3>What is being measured?</h3>
-        <p class="small">Download checks data coming to your device, upload checks data leaving your device, and ping checks response time.</p>
+        <h3>Why loaded ping matters</h3>
+        <p class="small">Gaming and video calls use upload and download at the same time. Loaded ping shows how latency behaves while the connection is busy.</p>
       </article>
       <article class="info-panel speed-tip-card">
         <h3>Need help?</h3>
@@ -88,15 +104,15 @@
   <section class="speed-guide-panel" role="dialog" aria-modal="true" aria-labelledby="speedGuideTitle">
     <button class="guide-close" type="button" data-close-guide aria-label="Close speed test guide">×</button>
     <span class="badge">Before you test</span>
-    <h2 id="speedGuideTitle">Get a cleaner speed result</h2>
+    <h2 id="speedGuideTitle">Choose the result you want</h2>
     <ul class="check-list">
-      <li>Move close to your Wi-Fi router.</li>
-      <li>Pause Netflix, YouTube, gaming downloads and cloud backups.</li>
-      <li>Use one testing device if possible.</li>
-      <li>Run the test twice if the first result looks strange.</li>
+      <li>For a clean maximum result, pause streaming, downloads and backups first.</li>
+      <li>For a real-world result, leave your normal apps running and test as you are.</li>
+      <li>The 30-second test runs download, upload and loaded ping together.</li>
+      <li>Run it twice if the first result looks unusual.</li>
     </ul>
     <div class="actions">
-      <button class="btn" id="guideStart" type="button">Start test now</button>
+      <button class="btn" id="guideStart" type="button">Start live test</button>
       <button class="btn secondary" type="button" data-close-guide>Skip guide</button>
     </div>
     <label class="guide-never"><input type="checkbox" id="dontShowGuide"> Don’t show this guide again</label>
@@ -106,8 +122,8 @@
 <div class="toast" id="toast"></div>
 <footer></footer>
 
-<script src="/assets/js/app.js"></script>
+<script src="/assets/js/app.js?v=footerfinal"></script>
 <script src="/assets/js/ai.js"></script>
-<script src="/assets/js/speedtest.js"></script>
+<script src="/assets/js/speedtest.js?v=finalaccuracy"></script>
 </body>
 </html>

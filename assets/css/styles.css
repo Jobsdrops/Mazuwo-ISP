@@ -1010,23 +1010,48 @@ input:disabled {
 }
 
 .ai-form input {
-  flex: ;
+  flex: 1;
 }
 
 .footer {
   margin-top: clamp(2rem, 5vw, 4rem);
   padding: 2.4rem 0 2rem;
-  border-top: 1px solid var(--line);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   background: #0f234f;
-  color: rgba(0, 0, 0, 0.78);
+  color: rgba(255, 255, 255, 0.86);
 }
 
 .footer a {
-  color: 
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: none;
 }
 
 .footer a:hover {
-  color: #000000;
+  color: #fff;
+}
+
+.footer .btn.secondary,
+.footer .footer-contact-btn {
+  border-color: rgba(255, 255, 255, 0.96);
+  background: #fff;
+  color: #0f234f;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
+}
+
+.footer .btn.secondary:hover,
+.footer .footer-contact-btn:hover {
+  border-color: var(--brand-2);
+  background: var(--brand-2);
+  color: #fff;
+  box-shadow: 0 14px 30px rgba(24, 166, 200, 0.22);
+}
+
+.footer-contact-actions {
+  align-items: center;
+}
+
+.footer-contact-btn {
+  min-width: 112px;
 }
 
 .footer-grid {
@@ -1447,5 +1472,147 @@ button:disabled,
 
   .speed-readout {
     top: 56%;
+  }
+}
+
+/* 30-second live speed test refinements */
+.speed-live-card .speed-card-top {
+  margin-bottom: 0.9rem;
+}
+
+.speed-countdown {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.55rem;
+  margin: 0.35rem 0 0.65rem;
+  padding: 0.9rem;
+  border: 1px solid rgba(217, 228, 239, 0.98);
+  border-radius: 16px;
+  background: rgba(237, 246, 255, 0.82);
+}
+
+.speed-countdown > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+
+.speed-countdown span {
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.speed-countdown strong {
+  color: var(--brand);
+  font-size: clamp(1.25rem, 3vw, 1.65rem);
+  line-height: 1;
+}
+
+.speed-progress {
+  overflow: hidden;
+  width: 100%;
+  height: 9px;
+  border-radius: 999px;
+  background: #dbe8f4;
+}
+
+.speed-progress span {
+  display: block;
+  width: 0%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--brand), var(--brand-3));
+  transition: width 0.22s linear;
+}
+
+.speed-results-live .speed-result {
+  display: grid;
+  align-content: center;
+  min-height: 118px;
+}
+
+.speed-result small {
+  display: block;
+  margin-top: 0.28rem;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 760;
+  line-height: 1.25;
+}
+
+.speed-results-live .speed-result strong {
+  font-size: clamp(1.1rem, 2.6vw, 1.45rem);
+  letter-spacing: -0.02em;
+}
+
+.speed-live-card .speed-readout strong {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+}
+
+@media (max-width: 640px) {
+  .speed-results-live .speed-result {
+    min-height: 96px;
+  }
+
+  .speed-countdown > div:first-child {
+    align-items: flex-start;
+  }
+}
+
+/* 30-second live speed test fixes */
+.speed-status-stack {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: end;
+  gap: 0.45rem;
+}
+
+.speed-clock {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 32px;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid rgba(24, 166, 200, 0.22);
+  border-radius: 999px;
+  background: rgba(237, 246, 255, 0.92);
+  color: var(--brand);
+  font-size: 0.9rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.speed-clock[hidden] {
+  display: none;
+}
+
+.speed-clock-dot {
+  width: 0.52rem;
+  height: 0.52rem;
+  border-radius: 999px;
+  background: var(--brand-2);
+  box-shadow: 0 0 0 0 rgba(24, 166, 200, 0.35);
+  animation: speedClockPulse 1.25s ease-out infinite;
+}
+
+@keyframes speedClockPulse {
+  0% { box-shadow: 0 0 0 0 rgba(24, 166, 200, 0.35); }
+  80% { box-shadow: 0 0 0 8px rgba(24, 166, 200, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(24, 166, 200, 0); }
+}
+
+/* The previous progress bar block is intentionally disabled. */
+.speed-countdown,
+.speed-progress {
+  display: none !important;
+}
+
+@media (max-width: 640px) {
+  .speed-status-stack {
+    justify-items: start;
   }
 }
