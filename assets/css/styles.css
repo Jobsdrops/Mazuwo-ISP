@@ -1616,3 +1616,291 @@ button:disabled,
     justify-items: start;
   }
 }
+
+/* Final mobile polish pass */
+@media (max-width: 760px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: min(100% - 24px, 1160px);
+  }
+
+  .section,
+  .speed-hero,
+  .services-hero,
+  .hero {
+    padding-top: 2.1rem;
+    padding-bottom: 2.1rem;
+  }
+
+  .h-title,
+  .hero-title,
+  .services-hero__title {
+    font-size: clamp(2rem, 11vw, 3rem);
+    line-height: 0.98;
+    letter-spacing: -0.055em;
+  }
+
+  .hero-copy,
+  .services-hero__sub,
+  .speed-copy .hero-copy,
+  .lead,
+  p {
+    line-height: 1.55;
+  }
+
+  .hero-grid,
+  .services-hero__card,
+  .speed-hero-grid {
+    gap: 1rem;
+  }
+
+  .card,
+  .speed-card,
+  .services-hero__card,
+  .hero-note {
+    border-radius: 18px;
+  }
+
+  .card,
+  .speed-card {
+    padding: 1rem;
+  }
+
+  .actions {
+    gap: 0.55rem;
+  }
+
+  .actions .btn,
+  .speed-controls .btn,
+  .footer-contact-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .metric-strip {
+    gap: 0.65rem;
+  }
+
+  .metric {
+    padding: 0.85rem;
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4,
+  .footer-grid {
+    gap: 0.85rem;
+  }
+
+  .footer {
+    margin-top: 2rem;
+    padding: 1.8rem 0 1.4rem;
+  }
+
+  .footer-grid {
+    gap: 1.2rem;
+  }
+
+  .footer-brand img {
+    width: 132px;
+  }
+
+  .copy {
+    display: block;
+    text-align: center;
+  }
+
+  .speedometer svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .speed-results-live,
+  .speed-results {
+    gap: 0.65rem;
+  }
+
+  .speed-results-live .speed-result,
+  .speed-result {
+    min-height: auto;
+    padding: 0.88rem;
+  }
+
+  .speed-result strong {
+    font-size: 1.25rem;
+  }
+
+  .speed-readout strong {
+    font-size: clamp(2.45rem, 15vw, 4rem) !important;
+  }
+
+  .speed-status-stack {
+    justify-items: start;
+    margin-top: 0.35rem;
+  }
+
+  .speed-clock {
+    min-height: 28px;
+    padding: 0.3rem 0.65rem;
+    font-size: 0.84rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .nav {
+    min-height: 62px;
+  }
+
+  .brand img {
+    width: 138px;
+    height: auto;
+  }
+
+  .mobilemenu {
+    padding-top: 0.7rem;
+    padding-bottom: 0.9rem;
+  }
+
+  .mobilemenu a {
+    padding: 0.72rem 0.8rem;
+    border-radius: 14px;
+  }
+
+  .hero-visual,
+  .services-hero__media {
+    margin-top: 0.2rem;
+  }
+
+  .hero-visual img,
+  .services-hero__media img {
+    max-height: 320px;
+    object-fit: contain;
+  }
+
+  .section-head {
+    margin-bottom: 0.95rem;
+  }
+
+  .footer-contact-actions,
+  .footer .actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+
+  .footer .pill {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* Lucy mobile bottom-sheet fix */
+@media (max-width: 640px) {
+  .ai-fab {
+    right: 12px;
+    bottom: 12px;
+    max-width: calc(100vw - 24px);
+    padding: 0.76rem 0.95rem;
+  }
+
+  .ai {
+    left: 10px;
+    right: 10px;
+    bottom: 70px;
+    top: auto;
+    width: auto;
+    max-height: min(76vh, 620px);
+    border-radius: 20px;
+    display: none;
+    flex-direction: column;
+  }
+
+  .ai.open {
+    display: flex;
+  }
+
+  .ai-top {
+    flex: 0 0 auto;
+    padding: 0.75rem;
+  }
+
+  .ai-title {
+    min-width: 0;
+  }
+
+  .ai-title b,
+  .ai-title span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .ai-avatar {
+    width: 34px;
+    height: 34px;
+  }
+
+  .ai-close {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    min-height: 42px;
+    font-size: 1.35rem;
+    line-height: 1;
+    border-radius: 14px;
+  }
+
+  .ai-body {
+    flex: 1 1 auto;
+    max-height: none;
+    min-height: 0;
+    padding: 0.8rem;
+    overflow-y: auto;
+  }
+
+  .ai-msg {
+    max-width: 96%;
+    padding: 0.68rem 0.74rem;
+    font-size: 0.92rem;
+  }
+
+  .ai-suggestions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .ai-chip {
+    width: 100%;
+    text-align: left;
+  }
+
+  .ai-form {
+    flex: 0 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 0.5rem;
+    padding: 0.68rem;
+  }
+
+  .ai-form input {
+    min-width: 0;
+  }
+
+  .ai-form .btn {
+    padding-left: 0.85rem;
+    padding-right: 0.85rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .ai-form {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-form .btn {
+    width: 100%;
+  }
+}
