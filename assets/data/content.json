@@ -1,0 +1,122 @@
+{
+  "brand": {
+    "mission": "We are all about the expansion and transformation of technology in our communities",
+    "values": [
+      "Connection",
+      "Expansion",
+      "Innovations"
+    ],
+    "vision": "Every home and business in our communities to be connected to the internet in the digital age.",
+    "availability": "Mazuwo Wireless is currently available in the Vhembe district, Thohoyandou and surrounding areas. Give us a call today and our team will be at your doorstep to connect you to uncapped internet. It is a month-to-month uncapped WiFi which means you and your household or business are able to connect 24/7 provided you are connected to our WiFi.",
+    "benefits": "You will have freedom to access internet at an affordable cost, without losing your connection. Wi‑Fi has become the popular choice of connectivity in homes and businesses. Mazuwo is here to make sure our communities are more connected through the internet using the great advantages of technology such as Wi‑Fi."
+  },
+  "contact": {
+    "whatsapp": "+27 (66) 066-8508",
+    "phone": "+27 87 897 3731",
+    "alt_phone": "0878973731",
+    "email": "Info@mazuwo.co.za",
+    "address_lines": [
+      "24 Mvudi Park",
+      "Thohoyandou",
+      "0950"
+    ]
+  },
+  "packages": {
+    "home": [
+      {
+        "name": "Basic",
+        "price": "R350",
+        "period": "p/m",
+        "down": "4 Mbps",
+        "up": "2 Mbps",
+        "slug": "BASIC"
+      },
+      {
+        "name": "Pro",
+        "price": "R550",
+        "period": "p/m",
+        "down": "6 Mbps",
+        "up": "4 Mbps",
+        "slug": "PRO"
+      },
+      {
+        "name": "Ultimate",
+        "price": "R850",
+        "period": "p/m",
+        "down": "10 Mbps",
+        "up": "6 Mbps",
+        "slug": "ULTIMATE"
+      }
+    ],
+    "business_note": "Speed and installation fee depends on the customer’s requirements. Please contact us for a quotation.",
+    "cctv_install_with": "Once‑off installation fee with our devices is R1600.",
+    "cctv_install_own": "Once‑off installation fee with your own devices is R1300.",
+    "cctv_extras": "Extras include UPS (for power outages/no electricity) and screens from R3 500. All CCTV prices are once‑off. We have a wide range of camera quality, functionality and specs you can choose from."
+  },
+  "apply": {
+    "internet": [
+      {
+        "label": "BASIC - 4/2 Mbps",
+        "price": 350,
+        "value": "BASIC"
+      },
+      {
+        "label": "PRO - 6/3 Mbps",
+        "price": 550,
+        "value": "PRO"
+      },
+      {
+        "label": "ULTIMATE - 10/4 Mbps",
+        "price": 850,
+        "value": "ULTIMATE"
+      },
+      {
+        "label": "15 Mbps",
+        "price": 1330,
+        "value": "15"
+      },
+      {
+        "label": "20 Mbps",
+        "price": 1700,
+        "value": "20"
+      }
+    ],
+    "voice": [
+      {
+        "label": "Mazuwo Voice Plan",
+        "price": 550,
+        "value": "VOICE"
+      }
+    ],
+    "recurring": [
+      {
+        "label": "Insurance",
+        "price": 15,
+        "value": "INSURANCE"
+      }
+    ]
+  },
+  "payment": {
+    "bank": "First National Bank",
+    "account_name": "Mazuwo Networks",
+    "account_number": "62847813244",
+    "branch_name": "Carlsworld",
+    "branch_code": "250117",
+    "reference": "Full names",
+    "proof_email": "info@mazuwo.co.za"
+  },
+  "faq_questions": [
+    "How do I set up my router?",
+    "When is my bill due, and how can I pay it?",
+    "Why is my internet slow? How do I fix it?",
+    "How do I change my plan?",
+    "Does my plan include unlimited data?",
+    "Why do I need insurance?",
+    "If my router breaks down, will you send a replacement?",
+    "Can you respond within 2 hours if you generally react within 4 hours?",
+    "Do you have advanced technical resources to answer over the weekend?",
+    "Have you lent equipment to a customer while waiting for their replacement?",
+    "Has your CEO ever visited a potential or present client personally?",
+    "Do you frequently assess your clients’ bandwidth use?"
+  ]
+}

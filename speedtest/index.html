@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mazuwo Wireless - Speed Test</title>
+  <meta name="description" content="Test your Mazuwo internet download speed, upload speed and ping from inside the Mazuwo Wireless website.">
+  <link rel="icon" href="/assets/images/LOGO-.png">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+<header></header>
+
+<main id="main">
+  <section class="speed-hero">
+    <div class="container speed-hero-grid">
+      <div class="speed-copy">
+        <span class="badge">Mazuwo Speed Check</span>
+        <h1 class="hero-title">Test your connection in a few seconds.</h1>
+        <p class="hero-copy">Run a quick browser-based test for download, upload and ping. For the fairest result, pause streaming, stay close to your router and test one device at a time.</p>
+        <div class="actions">
+          <button class="btn" id="speedStartTop" type="button">Start Speed Test</button>
+          <button class="btn secondary" id="speedGuideBtn" type="button">How to test properly</button>
+        </div>
+      </div>
+
+      <div class="speed-card" aria-live="polite">
+        <div class="speed-card-top">
+          <div>
+            <p class="section-kicker">Live result</p>
+            <h2 id="speedPhase">Ready</h2>
+          </div>
+          <span class="speed-pill" id="speedStatus">Idle</span>
+        </div>
+
+        <div class="speedometer" aria-label="Current speed gauge">
+          <svg viewBox="0 0 260 160" role="img" aria-labelledby="gaugeTitle gaugeDesc">
+            <title id="gaugeTitle">Speedometer gauge</title>
+            <desc id="gaugeDesc">The needle moves as the measured speed changes.</desc>
+            <path class="gauge-track" d="M35 130 A95 95 0 0 1 225 130" pathLength="100"></path>
+            <path class="gauge-fill" id="gaugeFill" d="M35 130 A95 95 0 0 1 225 130" pathLength="100"></path>
+            <line class="gauge-needle" id="gaugeNeedle" x1="130" y1="130" x2="130" y2="53"></line>
+            <circle class="gauge-hub" cx="130" cy="130" r="9"></circle>
+          </svg>
+          <div class="speed-readout">
+            <strong id="liveSpeed">0.0</strong>
+            <span>Mbps</span>
+          </div>
+        </div>
+
+        <div class="speed-results">
+          <div class="speed-result"><span>Ping</span><strong id="pingResult">-- ms</strong></div>
+          <div class="speed-result"><span>Download</span><strong id="downloadResult">-- Mbps</strong></div>
+          <div class="speed-result"><span>Upload</span><strong id="uploadResult">-- Mbps</strong></div>
+        </div>
+
+        <div class="speed-controls">
+          <button class="btn full" id="speedStart" type="button">Start Test</button>
+          <button class="btn secondary full" id="speedStop" type="button" disabled>Stop</button>
+        </div>
+
+        <p class="small speed-note" id="speedNote">This test uses Cloudflare Pages Functions on this website. Results are useful for quick checks, but Wi-Fi distance, device age and background apps can affect accuracy.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band">
+    <div class="container grid-3">
+      <article class="info-panel speed-tip-card">
+        <h3>For best accuracy</h3>
+        <p class="small">Stand near the router, close downloads, pause streaming and test again if the first result looks unusual.</p>
+      </article>
+      <article class="info-panel speed-tip-card">
+        <h3>What is being measured?</h3>
+        <p class="small">Download checks data coming to your device, upload checks data leaving your device, and ping checks response time.</p>
+      </article>
+      <article class="info-panel speed-tip-card">
+        <h3>Need help?</h3>
+        <p class="small">If results stay much lower than your package, contact Mazuwo support with your result and area.</p>
+        <a class="btn small secondary" href="/contact">Contact Support</a>
+      </article>
+    </div>
+  </section>
+</main>
+
+<div class="speed-guide" id="speedGuide" aria-hidden="true">
+  <div class="speed-guide-backdrop" data-close-guide></div>
+  <section class="speed-guide-panel" role="dialog" aria-modal="true" aria-labelledby="speedGuideTitle">
+    <button class="guide-close" type="button" data-close-guide aria-label="Close speed test guide">×</button>
+    <span class="badge">Before you test</span>
+    <h2 id="speedGuideTitle">Get a cleaner speed result</h2>
+    <ul class="check-list">
+      <li>Move close to your Wi-Fi router.</li>
+      <li>Pause Netflix, YouTube, gaming downloads and cloud backups.</li>
+      <li>Use one testing device if possible.</li>
+      <li>Run the test twice if the first result looks strange.</li>
+    </ul>
+    <div class="actions">
+      <button class="btn" id="guideStart" type="button">Start test now</button>
+      <button class="btn secondary" type="button" data-close-guide>Skip guide</button>
+    </div>
+    <label class="guide-never"><input type="checkbox" id="dontShowGuide"> Don’t show this guide again</label>
+  </section>
+</div>
+
+<div class="toast" id="toast"></div>
+<footer></footer>
+
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/ai.js"></script>
+<script src="/assets/js/speedtest.js"></script>
+</body>
+</html>

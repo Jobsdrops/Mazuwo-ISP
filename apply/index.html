@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mazuwo Wireless - Application</title>
+  <meta name="description" content="Apply for Mazuwo Wireless internet, CCTV, VoIP or business services.">
+  <link rel="icon" href="/assets/images/LOGO-.png">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+<header></header>
+
+<main id="main" class="container section">
+  <div class="section-head">
+    <div>
+      <p class="section-kicker">Get Connected</p>
+      <h1 class="section-title">Apply for Mazuwo service.</h1>
+      <p class="section-desc">Tell the team who you are, where you are and which service you want. Your email app will open with the application already prepared.</p>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <section class="form">
+      <form id="applyForm" data-email="info@mazuwo.co.za">
+        <div class="field-row">
+          <div class="field">
+            <label for="firstName">First name *</label>
+            <input id="firstName" name="firstName" autocomplete="given-name" required>
+          </div>
+          <div class="field">
+            <label for="lastName">Last name</label>
+            <input id="lastName" name="lastName" autocomplete="family-name">
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone number *</label>
+            <input id="phone" name="phone" autocomplete="tel" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="street">Street or landmark</label>
+          <input id="street" name="street" autocomplete="street-address" placeholder="Example: near Mvudi Park">
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="city">Village, suburb or town</label>
+            <input id="city" name="city" autocomplete="address-level2">
+          </div>
+          <div class="field">
+            <label for="zip">ZIP code</label>
+            <input id="zip" name="zip" autocomplete="postal-code">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="tariff">Choose service *</label>
+          <select id="tariff" name="tariff" required>
+            <optgroup label="Internet tariffs">
+              <option value="BASIC">BASIC - 4/2 Mbps | R350 p/m</option>
+              <option value="PRO">PRO - 6/4 Mbps | R550 p/m</option>
+              <option value="ULTIMATE">ULTIMATE - 10/6 Mbps | R850 p/m</option>
+              <option value="15">15 Mbps | R1330 p/m</option>
+              <option value="20">20 Mbps | R1700 p/m</option>
+              <option value="BUSINESS">Business internet quote</option>
+            </optgroup>
+            <optgroup label="CCTV and voice">
+              <option value="CCTV_4">CCTV - 4 Channel</option>
+              <option value="CCTV_8">CCTV - 8 Channel</option>
+              <option value="VOICE">Mazuwo Voice Plan</option>
+              <option value="VOIP_PHONE">VoIP phone</option>
+              <option value="VOIP_LINE">VoIP line and configuration</option>
+            </optgroup>
+            <optgroup label="Recurring">
+              <option value="INSURANCE">Insurance | R15</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes" placeholder="Tell us about your area, number of users, or any special request"></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn" type="submit">Submit Application</button>
+          <button class="btn secondary" type="button" data-whatsapp-message="Hi Mazuwo, I want to apply. My area is: [type here]. Preferred plan: [type here].">Apply on WhatsApp</button>
+        </div>
+      </form>
+    </section>
+
+    <aside class="card">
+      <p class="section-kicker">What Happens Next</p>
+      <h2 class="section-title" style="font-size:1.65rem">A clear handoff to the team.</h2>
+      <ul class="check-list">
+        <li>You submit your application details.</li>
+        <li>Mazuwo confirms coverage and installation requirements.</li>
+        <li>The team schedules installation and gets you online.</li>
+      </ul>
+      <hr class="hr">
+      <p class="small"><strong>Tip:</strong> include your village, suburb or a nearby landmark. That helps the team check signal and availability faster.</p>
+      <div class="info-panel" style="margin-top:1rem">
+        <p class="small"><strong>Need a recommendation?</strong> Ask Lucy in the bottom-right corner. It runs inside the site using the local AI model file.</p>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<div class="toast" id="toast"></div>
+<footer></footer>
+
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/ai.js"></script>
+</body>
+</html>

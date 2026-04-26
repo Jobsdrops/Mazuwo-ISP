@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mazuwo Wireless - Contact</title>
+  <meta name="description" content="Contact Mazuwo Wireless for sales, support, accounts, coverage and new applications.">
+  <link rel="icon" href="/assets/images/LOGO-.png">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+<header></header>
+
+<main id="main" class="container section">
+  <div class="section-head">
+    <div>
+      <p class="section-kicker">Contact</p>
+      <h1 class="section-title">Reach the right Mazuwo team.</h1>
+      <p class="section-desc">Call, WhatsApp, visit the office or send a routed message to sales, support, accounts or customer service.</p>
+    </div>
+  </div>
+
+  <div class="grid-2">
+    <section class="grid-2" aria-label="Contact options">
+      <article class="feature">
+        <h3>Call</h3>
+        <p><strong>087 897 3731</strong></p>
+        <div class="actions"><a class="btn small secondary" href="tel:0878973731">Call Now</a></div>
+      </article>
+      <article class="feature">
+        <h3>WhatsApp</h3>
+        <p><strong>+27 66 066 8508</strong></p>
+        <div class="actions"><a class="btn small secondary" href="https://wa.me/27660668508" target="_blank" rel="noreferrer">Open WhatsApp</a></div>
+      </article>
+      <article class="feature">
+        <h3>Email</h3>
+        <p><strong>info@mazuwo.co.za</strong></p>
+        <div class="actions"><a class="btn small secondary" href="mailto:info@mazuwo.co.za">Email Us</a></div>
+      </article>
+      <article class="feature">
+        <h3>Office</h3>
+        <p>24 Mvudi Park<br>Thohoyandou<br>0950</p>
+      </article>
+    </section>
+
+    <section class="form">
+      <h2 class="section-title" style="font-size:1.65rem">Send a message</h2>
+      <p class="small">Pick a department and the site will prepare the email for the right address.</p>
+
+      <form id="contactForm">
+        <div class="field">
+          <label for="name">Your name *</label>
+          <input id="name" name="name" autocomplete="name" required>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="email">Your email *</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone *</label>
+            <input id="phone" name="phone" autocomplete="tel" required>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="address">Address or area</label>
+          <input id="address" name="address" autocomplete="street-address">
+        </div>
+
+        <div class="field">
+          <label for="departmentSelect">Department</label>
+          <select id="departmentSelect" name="department">
+            <option value="Customer Relations">Customer Relations</option>
+            <option value="New application">New application</option>
+            <option value="Sales">Sales</option>
+            <option value="Customer service">Customer service</option>
+            <option value="Technical support">Technical support</option>
+            <option value="Accounts">Accounts</option>
+            <option value="Other queries">Other queries</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" required placeholder="Tell us what you need help with"></textarea>
+        </div>
+
+        <p class="small">Sending to: <strong id="sendToEmail">info@mazuwo.co.za</strong></p>
+
+        <div class="form-actions">
+          <button class="btn" type="submit">Send Message</button>
+          <a class="btn secondary" href="/faq">Read FAQ</a>
+        </div>
+      </form>
+    </section>
+  </div>
+</main>
+
+<div class="toast" id="toast"></div>
+<footer></footer>
+
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/ai.js"></script>
+</body>
+</html>

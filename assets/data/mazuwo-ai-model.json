@@ -1,0 +1,102 @@
+{
+  "version": "2026.04.local",
+  "assistantName": "Lucy",
+  "brand": "Mazuwo Wireless",
+  "coverage": "Mazuwo Wireless is available around Thohoyandou and the Vhembe District. If a visitor is unsure, ask for their village, suburb, landmark and phone number, then send them to Coverage or WhatsApp.",
+  "contacts": {
+    "whatsapp": "+27 66 066 8508",
+    "phone": "087 897 3731",
+    "email": "info@mazuwo.co.za",
+    "support": "support@mazuwo.co.za",
+    "accounts": "accounts@mazuwo.co.za"
+  },
+  "packages": [
+    {
+      "slug": "BASIC",
+      "name": "Basic",
+      "price": "R350 p/m",
+      "down": "4 Mbps",
+      "up": "2 Mbps",
+      "bestFor": "1 to 2 people, WhatsApp, school work, social media and light YouTube",
+      "keywords": ["basic", "cheap", "affordable", "school", "facebook", "whatsapp", "one person", "two people", "light"]
+    },
+    {
+      "slug": "PRO",
+      "name": "Pro",
+      "price": "R550 p/m",
+      "down": "6 Mbps",
+      "up": "4 Mbps",
+      "bestFor": "families, remote work, streaming and several phones online at once",
+      "keywords": ["pro", "family", "work", "netflix", "stream", "zoom", "teams", "three people", "four people", "gaming"]
+    },
+    {
+      "slug": "ULTIMATE",
+      "name": "Ultimate",
+      "price": "R850 p/m",
+      "down": "10 Mbps",
+      "up": "6 Mbps",
+      "bestFor": "heavy streaming, gaming, many devices and busier households",
+      "keywords": ["ultimate", "heavy", "many devices", "gaming", "playstation", "xbox", "streaming", "download", "five people", "six people"]
+    },
+    {
+      "slug": "BUSINESS",
+      "name": "Business",
+      "price": "from R550 p/m",
+      "down": "custom",
+      "up": "custom",
+      "bestFor": "offices, shops, VoIP, point of sale and custom capacity",
+      "keywords": ["business", "office", "shop", "company", "voip", "landline", "pos", "quotation", "quote"]
+    }
+  ],
+  "knowledge": [
+    {
+      "id": "coverage",
+      "title": "Coverage",
+      "patterns": ["coverage", "available", "area", "village", "suburb", "where", "location", "thohoyandou", "vhembe", "mvudi"],
+      "answer": "Mazuwo serves Thohoyandou and surrounding Vhembe District areas. The fastest next step is to send your area or nearest landmark through the Coverage page so the team can confirm your signal."
+    },
+    {
+      "id": "apply",
+      "title": "Apply",
+      "patterns": ["apply", "connect", "installation", "install", "get connected", "join", "new customer"],
+      "answer": "To get connected, choose a package, submit the application form, and Mazuwo will confirm coverage and installation details. If you prefer WhatsApp, send your area and preferred plan."
+    },
+    {
+      "id": "payment",
+      "title": "Payment",
+      "patterns": ["pay", "payment", "bank", "eft", "account", "proof", "invoice", "bill"],
+      "answer": "You can pay by EFT to Mazuwo Networks, FNB account 62847813244, branch code 250117, using your full names as reference. Send proof of payment to info@mazuwo.co.za."
+    },
+    {
+      "id": "support",
+      "title": "Support",
+      "patterns": ["slow", "offline", "not working", "support", "router", "password", "technical", "problem", "help"],
+      "answer": "Try restarting the router, placing it higher and testing near the router. If it is still slow or offline, WhatsApp +27 66 066 8508 or email support@mazuwo.co.za with your name, area and issue."
+    },
+    {
+      "id": "cctv",
+      "title": "CCTV",
+      "patterns": ["camera", "cctv", "security", "hikvision", "monitor", "dvr"],
+      "answer": "Mazuwo offers CCTV/security camera options, including 4 channel and 8 channel packages, plus installation. Ask for a quote if you need custom cameras, UPS backup or screens."
+    },
+    {
+      "id": "voip",
+      "title": "VoIP",
+      "patterns": ["voip", "landline", "phone", "telephone", "switchboard", "calls"],
+      "answer": "Mazuwo can help with VoIP/landline services, including phone hardware, line configuration, monthly service and switchboard extensions for businesses."
+    },
+    {
+      "id": "event",
+      "title": "Event Wi-Fi",
+      "patterns": ["event", "wedding", "conference", "outdoor", "indoor", "temporary", "wifi for event"],
+      "answer": "For indoor or outdoor event Wi-Fi, request a quote with the event location, date, expected guests and what people will need to do online."
+    }
+  ],
+  "quickPrompts": [
+    "Which package is best for 5 people and Netflix?",
+    "Do you cover my area?",
+    "How do I pay?",
+    "My Wi-Fi is slow",
+    "I need CCTV for my shop"
+  ]
+}

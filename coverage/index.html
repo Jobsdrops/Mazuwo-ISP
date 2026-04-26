@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mazuwo Wireless - Coverage</title>
+  <meta name="description" content="Check Mazuwo Wireless coverage and request confirmation for your area.">
+  <link rel="icon" href="/assets/images/LOGO-.png">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+<header></header>
+
+<main id="main" class="container section">
+  <div class="section-head">
+    <div>
+      <p class="section-kicker">Coverage</p>
+      <h1 class="section-title">Check your area.</h1>
+      <p class="section-desc">Use the map to view active and planned coverage. If you are not sure, send your area and the team will confirm.</p>
+    </div>
+    <a class="btn" href="/apply">Apply Now</a>
+  </div>
+
+  <div class="grid-2">
+    <section class="card">
+      <h2 class="section-title" style="font-size:1.65rem">Coverage map</h2>
+      <p class="small">Zoom and drag the map to inspect coverage around Thohoyandou and surrounding areas.</p>
+      <div id="map" aria-label="Mazuwo coverage map"></div>
+      <div class="legend">
+        <div class="legend-row small"><span class="legend-dot"></span><span><strong>Blue area:</strong> active coverage is available.</span></div>
+        <div class="legend-row small"><span class="legend-dot planned"></span><span><strong>Green dashed area:</strong> planned expansion, not active yet.</span></div>
+        <div class="legend-row small"><span class="legend-dot blank"></span><span><strong>No highlight:</strong> request confirmation before applying.</span></div>
+      </div>
+    </section>
+
+    <section class="form">
+      <h2 class="section-title" style="font-size:1.65rem">Request confirmation</h2>
+      <p class="small">This opens WhatsApp with a clean request message so you can send it instantly.</p>
+
+      <form id="coverageForm">
+        <div class="field">
+          <label for="name">Your name *</label>
+          <input id="name" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="phone">Phone *</label>
+          <input id="phone" name="phone" autocomplete="tel" required>
+        </div>
+        <div class="field">
+          <label for="area">Area, village or suburb *</label>
+          <input id="area" name="area" required placeholder="Example: Mvudi Park">
+        </div>
+        <div class="field">
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes" placeholder="Nearest landmark, street, or any detail that helps"></textarea>
+        </div>
+        <div class="form-actions">
+          <button class="btn" type="submit">Send Request</button>
+          <a class="btn secondary" href="https://wa.me/27660668508" target="_blank" rel="noreferrer">Open WhatsApp</a>
+        </div>
+      </form>
+    </section>
+  </div>
+</main>
+
+<div class="toast" id="toast"></div>
+<footer></footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="/assets/js/coverage-map.js"></script>
+<script src="/assets/js/app.js"></script>
+<script src="/assets/js/ai.js"></script>
+</body>
+</html>
